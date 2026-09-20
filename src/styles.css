@@ -1,0 +1,136 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #07080c;
+  --color-surface: #10131a;
+  --color-elevated: #181d28;
+  --color-fg: #f4f6f8;
+  --color-muted: #8b93a7;
+  --color-subtle: #5c6478;
+  --color-border: #2a3142;
+  --color-accent: #ce1126;
+  --color-accent-fg: #f4f6f8;
+  --color-navy: #0038a8;
+  --color-navy-bright: #1a5cff;
+  --color-sun: #fcd116;
+  --color-sun-fg: #141108;
+  --color-ok: #3dd68c;
+  --color-track: #0b0d12;
+
+  --font-sans: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Teko", "Barlow Condensed", sans-serif;
+  --font-hud: "Teko", "Barlow Condensed", sans-serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+
+  --shadow-border: 0 0 0 1px rgba(244, 246, 248, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(244, 246, 248, 0.14);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    min-height: 100svh;
+    background-color: var(--color-bg);
+    background-image:
+      linear-gradient(180deg, color-mix(in oklab, var(--color-navy) 22%, transparent) 0%, transparent 34%),
+      repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 3px,
+        rgb(255 255 255 / 0.018) 3px,
+        rgb(255 255 255 / 0.018) 4px
+      );
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.7;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-hud {
+  font-family: var(--font-hud);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.hud-glow {
+  text-shadow: 0 0 22px color-mix(in oklab, var(--color-accent) 38%, transparent);
+}
+
+.livery-stripe {
+  background: linear-gradient(
+    90deg,
+    var(--color-navy) 0%,
+    var(--color-navy) 42%,
+    #f4f6f8 42%,
+    #f4f6f8 50%,
+    var(--color-accent) 50%,
+    var(--color-accent) 100%
+  );
+}
+
+.checkered {
+  background-image:
+    linear-gradient(45deg, #1a1d24 25%, transparent 25%),
+    linear-gradient(-45deg, #1a1d24 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #1a1d24 75%),
+    linear-gradient(-45deg, transparent 75%, #1a1d24 75%);
+  background-size: 12px 12px;
+  background-position: 0 0, 0 6px, 6px -6px, -6px 0;
+  background-color: #0e1016;
+}
+
+@keyframes lights-on {
+  from { opacity: 0.25; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lights-out {
+  from { opacity: 1; }
+  to { opacity: 0.12; }
+}
+
+@keyframes go-in {
+  from { opacity: 0; transform: translateY(8px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

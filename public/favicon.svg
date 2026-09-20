@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="t"><rect width="32" height="32" rx="7"/></clipPath>
+  </defs>
+  <g clip-path="url(#t)">
+    <rect width="32" height="32" fill="#0038A8"/>
+    <rect y="26" width="32" height="4" fill="#CE1126"/>
+    <rect y="30" width="32" height="2" fill="#FCD116"/>
+    <g fill="#FCD116" transform="translate(16 14.5)">
+      <circle r="5.1"/>
+      <g id="ray">
+        <rect x="-1.15" y="-11.4" width="2.3" height="5.6" rx="0.35"/>
+      </g>
+      <use href="#ray" transform="rotate(45)"/>
+      <use href="#ray" transform="rotate(90)"/>
+      <use href="#ray" transform="rotate(135)"/>
+      <use href="#ray" transform="rotate(180)"/>
+      <use href="#ray" transform="rotate(225)"/>
+      <use href="#ray" transform="rotate(270)"/>
+      <use href="#ray" transform="rotate(315)"/>
+    </g>
+  </g>
+</svg>
