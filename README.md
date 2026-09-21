@@ -1,4 +1,4 @@
-# CAP Pit Clock
+# CAP Pit Timer
 
 Time-tracking alarm clock for the **Calisthenics Association of the Philippines**.
 
@@ -37,4 +37,4 @@ npm run build
 
 Philippine flag livery (blue / white / red / gold) on a carbon pit-wall. Teko for the countdown, Barlow for UI. Mobile-first; desktop is a two-column pit wall.
 
-Part of the [Ed Umbao Lab](https://github.com/edumbao) experiment.
+Part of the [Ed Umbao Lab](https:edumbao.com/lab/) experiment.
