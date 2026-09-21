@@ -4,6 +4,10 @@ Time-tracking alarm clock for the **Calisthenics Association of the Philippines*
 
 A racing-cockpit HUD for training days: today’s grid, alarms, a live countdown, a session timer, and a lap log. Built so athletes can lock a time, start a session, and not miss the next one.
 
+## Live Demo
+
+[Open CAP Pit Timer](https://cap-pit-timer.vercel.app/)
+
 ## What it does
 
 - **Today’s schedule** — seeded CAP-style sessions (mobility, pull, skill, street, bootcamp) plus any alarms you add
