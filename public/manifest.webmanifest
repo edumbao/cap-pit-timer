@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "CAP Pit Timer",
+  "short_name": "CAP Timer",
+  "description": "A mobile-first training alarm and session tracker for the Calisthenics Association of the Philippines.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#07080c",
+  "theme_color": "#07080c",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
